@@ -9,7 +9,12 @@
   margin: 0;
   font-size: 16px;
   font-family: var(--font-family);
-  -webkit-text-size-adjust: 100%;
+}
+
+.site-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
 }
 
 .container {
@@ -23,4 +28,21 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(26, 26, 26, 0.7);
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s,
+    visibility 0.3s;
+
+  &--visible {
+    opacity: 1;
+    visibility: visible;
+  }
 }

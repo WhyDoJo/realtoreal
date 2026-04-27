@@ -1,6 +1,9 @@
 @use "../mixins/_disable-mod-hover.scss" as mixins;
 
 .header {
+  position: relative;
+  z-index: 200;
+  background-color: var(--color-surface-default);
   &__top {
     padding: 20px 0;
     border-bottom: 1px solid var(--color-neutral-muted);

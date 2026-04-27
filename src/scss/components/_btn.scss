@@ -1,12 +1,129 @@
+@use "../mixins/_disable-mod-hover.scss" as mixins;
+
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 18px 32px;
-  font-weight: 500;
+  padding: 18px 38px;
+  border-width: 2px;
+  border-style: solid;
+
+  font-family: inherit;
+  font-weight: 600;
   font-size: 16px;
-  color: #fff;
-  background: #161618;
-  border-radius: 16px;
+  line-height: 122%;
+  text-transform: uppercase;
   cursor: pointer;
+  transition:
+    border-color 0.3s ease-in-out,
+    color 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
+
+  &--primary {
+    border-color: var(--color-accent);
+    color: var(--color-surface-default);
+    background-color: var(--color-accent);
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 2px dashed var(--color-accent);
+      outline-offset: 3px;
+    }
+
+    @include mixins.hover {
+      color: var(--color-accent);
+      background-color: var(--color-surface-default);
+      border-color: var(--color-accent);
+    }
+
+    &:active {
+      color: var(--color-surface-default);
+      background-color: var(--color-accent-active);
+      border-color: var(--color-accent-active);
+    }
+  }
+
+  &--secondary {
+    border-color: var(--color-surface-default);
+    color: var(--color-accent);
+    background-color: var(--color-surface-default);
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 2px dashed var(--color-accent);
+      outline-offset: 3px;
+    }
+
+    @include mixins.hover {
+      color: var(--color-surface-default);
+      background-color: var(--color-accent);
+      border-color: var(--color-accent);
+    }
+
+    &:active {
+      color: var(--color-surface-default);
+      background-color: var(--color-accent-active);
+      border-color: var(--color-accent-active);
+    }
+  }
+
+  &--tretiary {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    background-color: var(--color-surface-default);
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 2px dashed var(--color-accent);
+      outline-offset: 3px;
+    }
+
+    @include mixins.hover {
+      color: var(--color-surface-default);
+      background-color: var(--color-accent);
+      border-color: var(--color-accent);
+    }
+
+    &:active {
+      color: var(--color-surface-default);
+      background-color: var(--color-accent-active);
+      border-color: var(--color-accent-active);
+    }
+  }
+
+  &--quinary {
+    border-color: transparent;
+    color: var(--color-accent);
+    background-color: transparent;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 2px dashed var(--color-accent);
+      outline-offset: 3px;
+    }
+
+    @include mixins.hover {
+      color: var(--color-surface-default);
+      background-color: var(--color-accent);
+      border-color: var(--color-accent);
+    }
+
+    &:active {
+      color: var(--color-surface-default);
+      background-color: var(--color-accent-active);
+      border-color: var(--color-accent-active);
+    }
+  }
 }

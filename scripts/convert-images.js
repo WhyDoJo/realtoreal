@@ -3,7 +3,7 @@ import { join, extname, basename, dirname, relative } from "path";
 import sharp from "sharp";
 
 const SRC_DIR = "src/assets/img"; // ← Исходники (кидай сюда изображения)
-const OUTPUT_DIR = "public/images"; // ← Результат (Vite скопирует в корень билда)
+const OUTPUT_DIR = "public/img"; // ← Результат (Vite скопирует в корень билда)
 
 const SUPPORTED_FORMATS = [
   ".jpg",

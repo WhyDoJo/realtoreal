@@ -1,0 +1,120 @@
+.mini-cart {
+  position: absolute;
+  right: 0;
+  top: 80px;
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 80px);
+  background-color: var(--color-surface-default);
+  border-left: 1px solid var(--color-neutral-muted);
+  visibility: hidden;
+  transform: translateX(100%);
+  transition:
+    transform 0.3s ease-in-out,
+    visibility 0.3s ease-in-out;
+  z-index: 250;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 24px;
+    padding-bottom: 22px;
+  }
+
+  &__title {
+    position: relative;
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 122%;
+    text-transform: uppercase;
+    color: var(--color-primary);
+  }
+
+  &__quantity {
+    position: absolute;
+    right: -10px;
+    top: 0;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 122%;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+  }
+
+  &__close {
+    width: 20px;
+    height: 20px;
+    color: var(--color-primary);
+
+    svg {
+      fill: currentColor;
+    }
+  }
+
+  &__content {
+    min-height: 0;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+
+  &__products {
+    min-height: 0;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    padding: 0 12px;
+    padding-bottom: 12px;
+
+    .simplebar-content {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+  }
+
+  &__bottom {
+    margin-top: 12px;
+    border-top: 1px solid var(--color-neutral-muted);
+  }
+
+  &__result {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--gap);
+  }
+
+  &__text {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 122%;
+    text-transform: uppercase;
+    color: var(--color-primary);
+  }
+
+  &__total {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 122%;
+    text-transform: uppercase;
+    color: var(--color-primary);
+  }
+
+  &__btn {
+    width: 100%;
+  }
+
+  &--active {
+    visibility: visible;
+    transform: none;
+  }
+}

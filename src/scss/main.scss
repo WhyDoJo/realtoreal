@@ -5,10 +5,17 @@
 @use "./base/fonts" as *;
 @use "./base/globals" as *;
 
+// подключения библиотечных стилей
+@forward "./libs/_simplebar.scss";
+
 // подключения компонентов
+@forward "./components/_btn.scss";
 @forward "./components/_nav.scss";
 @forward "./components/_header-btn.scss";
 @forward "./components/_header-search.scss";
+@forward "./components/_mini-cart.scss";
+@forward "./components/_mini-cart-product.scss";
+@forward "./components/_stepper.scss";
 
 // подключения секций
 @forward "./sections/_header.scss";
