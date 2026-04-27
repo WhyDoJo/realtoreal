@@ -1,0 +1,103 @@
+@use "../mixins/_disable-mod-hover.scss" as mixins;
+
+.header {
+  &__top {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--color-neutral-muted);
+  }
+
+  &__bottom {
+    border-bottom: 1px solid var(--color-neutral-muted);
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    color: var(--color-primary);
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 120%;
+    text-transform: uppercase;
+
+    margin-right: 32px;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+
+    gap: 32px;
+  }
+
+  &__action {
+    color: var(--color-primary);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    text-transform: uppercase;
+
+    transition: color 0.3s ease-in-out;
+
+    .icon {
+      fill: currentColor;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 1px dashed currentColor;
+      outline-offset: 3px;
+    }
+
+    @include mixins.hover {
+      color: var(--color-primary-hover);
+    }
+
+    &:active {
+      color: var(--color-primary-active);
+    }
+  }
+
+  &__favorite,
+  &__cart {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__catalog {
+    margin-left: calc(-1 * var(--gap));
+  }
+
+  &__phone {
+    margin-left: auto;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--color-primary);
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 1px dashed currentColor;
+      outline-offset: 3px;
+    }
+
+    @include mixins.hover {
+      color: var(--color-primary);
+    }
+
+    &:active {
+      color: var(--color-primary-active);
+    }
+  }
+}

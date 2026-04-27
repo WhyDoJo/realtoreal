@@ -1,0 +1,14 @@
+// Импортируем переменные и reset глобально (as * — чтобы без префикса)
+@use "./base/normalize" as *;
+@use "./base/reset" as *;
+@use "./base/vars" as *;
+@use "./base/fonts" as *;
+@use "./base/globals" as *;
+
+// подключения компонентов
+@forward "./components/_nav.scss";
+@forward "./components/_header-btn.scss";
+@forward "./components/_header-search.scss";
+
+// подключения секций
+@forward "./sections/_header.scss";
