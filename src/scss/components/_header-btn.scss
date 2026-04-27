@@ -1,0 +1,45 @@
+@use "../mixins/_disable-mod-hover.scss" as mixins;
+
+.header-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 24px;
+  width: 237px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  border-right: 1px solid var(--color-neutral-muted);
+
+  transition: color 0.3s ease-in-out;
+
+  &__icon {
+    width: 16px;
+    height: 10px;
+  }
+
+  &__angle {
+    width: 16px;
+    height: 16px;
+
+    margin-left: auto;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 1px dashed currentColor;
+  }
+
+  @include mixins.hover {
+    color: var(--color-primary-hover);
+  }
+
+  &:active {
+    color: var(--color-primary-active);
+  }
+}

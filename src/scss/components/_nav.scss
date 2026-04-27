@@ -1,0 +1,36 @@
+@use "../mixins/_disable-mod-hover.scss" as mixins;
+
+.nav {
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: var(--gap);
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+
+    transition: color 0.3s ease-in-out;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 1px dashed currentColor;
+      outline-offset: 3px;
+    }
+
+    @include mixins.hover {
+      color: var(--color-primary);
+    }
+
+    &:active {
+      color: var(--color-primary-active);
+    }
+  }
+}
